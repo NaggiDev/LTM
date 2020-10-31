@@ -1,7 +1,7 @@
 package Server;
 
 import Client.Players;
-import Model.Board;
+import Game.Board;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

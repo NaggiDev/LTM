@@ -1,5 +1,6 @@
 package Client;
 
+import Game.Rectangle;
 import Server.ListenerClient;
 import Server.ListenerOtherPlayer;
 import java.awt.*;

@@ -1,14 +1,14 @@
-package Model;
+package Game;
 
 
-public class Rook extends Piece{
+public class Queen extends Piece{
 	
-	public Rook(String color, int x, int y, Board b){
+	public Queen(String color, int x, int y, Board b){
 		super(color, x, y, b);
 		if (color.equalsIgnoreCase("white"))
-			this.name = "R";
+			this.name = "Q";
 		else
-			this.name = "r";
+			this.name = "q";
 	}
 	
 	public Boolean isValidMovement(int x, int y){
@@ -53,10 +53,48 @@ public class Rook extends Piece{
 			return true;
 		}
 		
+		int distX = Math.abs(this.posX - x);
+		int distY = Math.abs(this.posY - y);
+		
+		if (distX != distY)
+			return false;
+		
+		if (this.posX > x && this.posY > y){
+			for (int i = 1; i < distX ; i ++){
+				if (!this.board.getPiece(this.posX - i, this.posY - i).isEmpty())
+					return false;
+			}
+			return true;
+		}
+		
+		if (this.posX < x && this.posY > y){
+			for (int i = 1; i < distX ; i ++){
+				if (!this.board.getPiece(this.posX + i, this.posY - i).isEmpty())
+					return false;
+			}
+			return true;
+		}
+		
+		if (this.posX > x && this.posY < y){
+			for (int i = 1; i < distX ; i ++){
+				if (!this.board.getPiece(this.posX - i, this.posY + i).isEmpty())
+					return false;
+			}
+			return true;
+		}
+		
+		if (this.posX < x && this.posY < y){
+			for (int i = 1; i < distX ; i ++){
+				if (!this.board.getPiece(this.posX + i, this.posY + i).isEmpty())
+					return false;
+			}
+			return true;
+		}
+		
 		return false;
 	}
 	
-	public Boolean isRook(){
+	public Boolean isQueen(){
 		return true;
 	}
 

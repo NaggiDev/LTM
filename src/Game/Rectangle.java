@@ -1,4 +1,4 @@
-package Client;
+package Game;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -6,7 +6,7 @@ import java.awt.Graphics;
 
 import javax.swing.JComponent;
 
-class Rectangle extends JComponent {
+public class Rectangle extends JComponent {
 	
     private static final long serialVersionUID = 1L;
     private Color rectangleColor;

@@ -1,7 +1,7 @@
-package Model;
+package Game;
 
 
-import Model.Piece;
+import Game.Piece;
 
 
 public class Empty extends Piece{

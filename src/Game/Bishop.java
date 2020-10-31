@@ -1,14 +1,14 @@
-package Model;
+package Game;
 
 
-public class Queen extends Piece{
+public class Bishop extends Piece{
 	
-	public Queen(String color, int x, int y, Board b){
+	public Bishop(String color, int x, int y, Board b){
 		super(color, x, y, b);
 		if (color.equalsIgnoreCase("white"))
-			this.name = "Q";
+			this.name = "B";
 		else
-			this.name = "q";
+			this.name = "b";
 	}
 	
 	public Boolean isValidMovement(int x, int y){
@@ -16,42 +16,6 @@ public class Queen extends Piece{
 		if ( x < 0 || x > 7 || y < 0 || y > 7 
 				|| this.board.getPiece(x, y).getColor().equalsIgnoreCase(this.color))
 			return false;
-		
-		//move to bottom
-		if (this.posX < x && this.posY == y){
-			for (int i = 1; i < x - this.posX; i++){
-				if (!board.getPiece(this.posX + i, y).isEmpty())
-					return false;
-			}
-			return true;
-		}
-		
-		//move to top
-		if (this.posX > x && this.posY == y){
-			for (int i = 1; i < this.posX - x; i++){
-				if (!board.getPiece(this.posX - i, y).isEmpty())
-					return false;
-			}
-			return true;
-		}
-		
-		//move to right
-		if (this.posX == x && this.posY < y){
-			for (int i = 1; i < y - this.posY; i++){
-				if (!board.getPiece(x,this.posY + i).isEmpty())
-					return false;
-			}
-			return true;
-		}
-		
-		//move to left
-		if (this.posX == x && this.posY > y){
-			for (int i = 1; i < this.posY - y ; i++){
-				if (!board.getPiece(x, this.posY - i).isEmpty())
-					return false;
-			}
-			return true;
-		}
 		
 		int distX = Math.abs(this.posX - x);
 		int distY = Math.abs(this.posY - y);
@@ -94,8 +58,8 @@ public class Queen extends Piece{
 		return false;
 	}
 	
-	public Boolean isQueen(){
+	public Boolean isBishop(){
 		return true;
 	}
-
+	
 }

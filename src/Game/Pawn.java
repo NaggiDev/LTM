@@ -1,4 +1,4 @@
-package Model;
+package Game;
 
 
 public class Pawn extends Piece{
