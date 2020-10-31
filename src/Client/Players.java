@@ -1,3 +1,6 @@
+package Client;
+
+import Server.ServerThread;
 import java.awt.List;
 import java.util.ArrayList;
 import java.util.Enumeration;
@@ -6,7 +9,7 @@ import java.util.Hashtable;
 public class Players {
 	private Hashtable<String, ServerThread> listOfPlayers;
 	
-	Players(){
+	public Players(){
 		this.listOfPlayers = new Hashtable<String, ServerThread>();
 	}
 	

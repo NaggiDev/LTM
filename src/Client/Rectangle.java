@@ -1,3 +1,5 @@
+package Client;
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -9,7 +11,7 @@ class Rectangle extends JComponent {
     private static final long serialVersionUID = 1L;
     private Color rectangleColor;
 
-    Rectangle(Color color){
+    public Rectangle(Color color){
     	this.rectangleColor = color;
     }
     

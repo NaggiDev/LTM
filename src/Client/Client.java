@@ -1,3 +1,7 @@
+package Client;
+
+import Server.ListenerClient;
+import Server.ListenerOtherPlayer;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -40,7 +44,7 @@ public class Client extends JFrame implements ActionListener {
 	private ArrayList<Rectangle> squareList = new ArrayList<Rectangle>();
 	
 	
-	Client(){
+	public Client(){
 		this.opponent = "";
 		this.color = "";
 		this.timer = new Time();
@@ -519,7 +523,7 @@ public class Client extends JFrame implements ActionListener {
 						updateBoard(processBoard(answer));
 						disableBoard();
 						lblTurn.setVisible(true);
-						new ListenerOtherPlayer(listener, this, timer).start();;
+						new ListenerOtherPlayer(listener, this, timer).start();
 						
 					}
 					
@@ -668,7 +672,7 @@ public class Client extends JFrame implements ActionListener {
 		}
 	}
 	public void refuse(String user){
-		System.out.println("Acepté la invitación de ");
+		System.out.println("Aceptï¿½ la invitaciï¿½n de ");
 		out.println("refuse " + user);
 		String answer;
 		try {

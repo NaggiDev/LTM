@@ -1,3 +1,7 @@
+package Server;
+
+import Client.Time;
+import Client.Client;
 import javax.swing.JOptionPane;
 
 public class ListenerOtherPlayer extends Thread{
@@ -5,7 +9,7 @@ public class ListenerOtherPlayer extends Thread{
 	private Client client;
 	private Time timer;
 	
-	ListenerOtherPlayer(ListenerClient listen, Client clt, Time timer){
+	public ListenerOtherPlayer(ListenerClient listen, Client clt, Time timer){
 		this.listener = listen;
 		this.client = clt;
 		this.timer = timer;

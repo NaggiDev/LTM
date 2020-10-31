@@ -1,3 +1,6 @@
+package Server;
+
+import Client.Players;
 import Model.Board;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -22,7 +25,7 @@ public class ServerThread extends Thread{
 	private boolean startGame;
 	private boolean colorSended;
 	
-	ServerThread(Socket clientSocket, Players players){
+	public ServerThread(Socket clientSocket, Players players){
 		this.socket = clientSocket;
 		this.players = players;
 		this.opponent = null;

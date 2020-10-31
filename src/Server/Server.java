@@ -1,3 +1,6 @@
+package Server;
+
+import Client.Players;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -18,7 +21,7 @@ public class Server extends JFrame implements ActionListener {
 	private JTextField txtServerPort;
 	private JButton btnStart;
 	
-	Server(){
+	public Server(){
 		System.out.println("Server init");
 		this.players = new Players();
 		showGUI();

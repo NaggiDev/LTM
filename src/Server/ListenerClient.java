@@ -1,3 +1,6 @@
+package Server;
+
+import Client.Client;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -11,7 +14,7 @@ public class ListenerClient extends Thread{
 	private String message = "";
 	private Client client;
 
-	ListenerClient(BufferedReader input, Client c){
+	public ListenerClient(BufferedReader input, Client c){
 		in = input;
 		this.client = c;
 	}

@@ -1,5 +1,4 @@
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
+package Client;
 
 public class Time {
 	
@@ -11,7 +10,7 @@ public class Time {
 	private long opponentInitialTime;
 	private long opponentEndTime;
 	
-	Time(){
+	public Time(){
 		this.myTotalTime = 0;
 		this.opponentToTalTime = 0;
 	}
