@@ -145,7 +145,8 @@ public class ServerThread extends Thread{
 			out.println("invalid username");
 	}
 		
-	/* Metodo al que llama otro ServerThread para invitar a jugar a este ServerThread */
+	/* Metodo al que llama otro ServerThread para invitar a jugar a e
+        ste ServerThread */
 	public synchronized void sendInvitation(String username, ServerThread otherServer){
 		if (!this.waiting && !this.startGame){
 			this.listOfInvitations.put(otherServer.getUserName(), otherServer);
